@@ -1,0 +1,26 @@
+@import 'utils';
+
+$module: 'AccountsPage';
+.#{$module} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .Search {
+    @include vertical-spacing();
+  }
+
+  &__content {
+    width: 100%;
+
+    @include breakpoint('desktop') {
+      display: flex;
+
+      .Table {
+        width: 100%;
+        margin-right: 0.8rem;
+      }
+    }
+  }
+}

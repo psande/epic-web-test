@@ -1,0 +1,28 @@
+@import 'utils';
+
+$module: 'Header';
+.#{$module} {
+  color: $c_white_1;
+  text-decoration: none;
+  display: block;
+  background-color: $c_navbar;
+  text-align: center;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid $c_gray_2;
+
+  img, svg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 2.4rem;
+    width: 2.1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    margin: 0 0 0 1.2rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+  }
+}

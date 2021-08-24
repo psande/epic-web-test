@@ -1,0 +1,53 @@
+// Core Styles
+@import 'utils';
+
+// Fonts
+@import '~typeface-lato';
+
+// Notifications
+@import '~react-notifications-component/dist/scss/notification';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: $c_body;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+  color: $c_white_1;
+  background-color: $c_body;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// Notifications
+.notification__item--info {
+  background-color: $c-navbar;
+  border-left-color: $c_blue;
+}
+
+.notification__item--success {
+  background-color: $c-navbar;
+  border-left-color: $c_green;
+}
+
+.notification__item--warning {
+  background-color: $c-navbar;
+  border-left-color: $c_yellow;
+}
+
+.notification__item--danger {
+  background-color: $c-navbar;
+  border-left-color: $c_red;
+}

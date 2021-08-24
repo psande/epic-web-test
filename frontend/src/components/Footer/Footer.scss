@@ -1,0 +1,52 @@
+@import 'utils';
+
+$module: 'Footer';
+.#{$module} {
+  margin: 2rem 0 2rem 0;
+
+  a {
+    color: $c-white_1;
+    text-decoration: none;
+    line-height: 1.2rem;
+    vertical-align: middle;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  svg {
+    display: inline;
+    vertical-align: middle;
+    margin-right: 1rem;
+
+    &:hover {
+      stroke: $c-blue;
+    }
+  }
+
+  ul {
+    @include breakpoint('desktop') {
+      display: flex;
+      margin-right: 5rem;
+    }
+
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin-bottom: 0.3rem;
+
+    @include breakpoint('desktop') {
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  div {
+    margin-bottom: 1rem;
+  }
+}

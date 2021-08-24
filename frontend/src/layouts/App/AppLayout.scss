@@ -1,0 +1,41 @@
+@import 'utils';
+
+$module: 'AppLayout';
+
+.#{$module} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 5rem;
+
+  @include breakpoint('desktop') {
+    margin-bottom: 0;
+  }
+
+  &__header {
+    width: 100%;
+  }
+
+  &__body {
+    // Calculations based on mixin vertical-spacing()
+    width: calc(100% - 1rem);
+
+    @include breakpoint('mobile') {
+      width: calc(100% - 2rem);
+    }
+
+    @include breakpoint('desktop') {
+      width: calc(1024px - 3rem);
+    }
+  }
+
+  &__footer {
+    margin-top: 4rem;
+    margin-bottom: 8rem;
+
+    @include breakpoint('mobile') {
+      margin-bottom: 0rem;
+    }
+  }
+}

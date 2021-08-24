@@ -1,0 +1,118 @@
+@import 'utils';
+
+$module: 'Sidebar';
+.#{$module} {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.8rem;
+  background-color: $c_navbar;
+  border-top: 1px solid $c_dark_3;
+
+  @include breakpoint('desktop') {
+    display: flex;
+    position: static;
+    border-top: none;
+    border-radius: 4px;
+    margin-bottom: 128px;
+  }
+
+  &__content {
+    background-color: $c-navbar;
+    padding: .8rem;
+    border-radius: 4px;
+    margin-bottom: 0.8rem;
+
+    @include breakpoint('desktop') {
+      position: relative;
+      min-width: 240px;
+      margin-right: 0.8rem;
+      margin-bottom: 0;
+    }
+
+    button {
+      margin-top: 0.8rem;
+      background-color: $c-blue;
+
+      @include breakpoint('desktop') {
+        position: absolute;
+        bottom: 0.8rem;
+        right: 0.8rem;
+        left: 0.8rem;
+        display: block;
+        width: calc(100% - 1.6rem);
+        margin-top: 0;
+
+        &.Form__delete {
+          bottom: 3rem;
+        }
+      }
+
+      &:first-of-type {
+        margin-top: 2rem;
+
+        @include breakpoint('desktop') {
+          margin-top: 0;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+
+    @include breakpoint('desktop') {
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: flex-start;
+      align-items: center;
+      margin-top: 0;
+    }
+
+    button {
+      margin-right: 0.8rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      @include breakpoint('desktop') {
+        margin-right: 0;
+        margin-bottom: 0.8rem;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      span {
+        display: none;
+
+        @include breakpoint('desktop') {
+          display: block;
+          writing-mode: vertical-lr;
+          text-orientation: sideways;
+          margin-top: 1rem;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+}
+
+.#{$module}--new {
+  background-color: $c-green;
+}
+
+.#{$module}--editing {
+  background-color: $c-blue;
+}

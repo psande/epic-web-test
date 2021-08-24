@@ -1,0 +1,44 @@
+@import 'utils';
+
+$module: 'button';
+#{$module} {
+  display: inline-block;
+  line-height: 1.5;
+  min-height: 38px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  color: $c_white_1;
+  background-color: $c_navbar;
+  border: 1px solid $c_gray_2;
+
+  &:hover {
+    background-color: $c-dark_1;
+  }
+
+  &:active:focus {
+    outline: none;
+  }
+
+  &:active {
+    background-color: $c-dark_2;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
+
+  svg {
+    display: inline-block;
+    height: 1.4rem;
+    width: 1.8rem;
+    line-height: 1.8rem;
+    vertical-align: middle;
+  }
+}

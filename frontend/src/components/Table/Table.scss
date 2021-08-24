@@ -1,0 +1,101 @@
+@import 'utils';
+
+$module: 'Table';
+.#{$module} {
+  display: block;
+
+  &__container {
+    max-width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border: 1px solid $c_gray_2;
+    background-color: $c-navbar;
+    border-radius: 4px;
+
+    th, td {
+      margin: 0;
+      padding: 0.5rem 1.2rem;
+      border-bottom: 1px solid $c_gray_2;
+      border-right: 1px solid $c_gray_2;
+      //width: 1%;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &.collapse {
+        width: 0.0000000001%;
+      }
+    }
+
+    th {
+      font-weight: 900;
+    }
+
+    tr {
+      height: 46px;
+
+      &:last-child {
+        td {
+          border-bottom: 0;
+        }
+      }
+    }
+
+    // Column widths tweaks specific for design.
+    tr th, tr td {
+      // ID
+      &:nth-child(1) {
+        max-width: 110px;
+        width: 110px;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      // Name and Email
+      &:nth-child(2), &:nth-child(3) {
+        text-align: left;
+        max-width: 300px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+
+    .#{$module}__selected, tbody tr:hover {
+      cursor: pointer;
+      background-color: $c_blue;
+
+      td {
+        border-color: $c_blue;
+      }
+    }
+  }
+
+  &__pagination {
+    @include vertical-spacing();
+    display: flex;
+    justify-content: center;
+
+    button {
+      margin-right: 0.8rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__footer {
+    @include vertical-spacing();
+    display: flex;
+    justify-content: center;
+  }
+}
