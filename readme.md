@@ -177,9 +177,6 @@ See below the general frontend file structure.
 
 ### Frontend
 
-**.env**
-Components Reusable (but in this case there might be business logic)
-
 Artifact | Description
 ----------- | -------------
 .env | Environment specific settings. We could have several of them (ie: .env.prod) and use them with [env-cmd](https://www.npmjs.com/package/env-cmd)
